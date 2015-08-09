@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @user=@post.user
   end
 
   # POST /posts
@@ -29,7 +30,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, notice: 'Post was successfully created.'
     else
-      render :new
+      render :new, notice: 'You must LogIn.'
     end
   end
 

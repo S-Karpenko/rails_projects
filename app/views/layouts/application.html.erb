@@ -7,14 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to image_tag('logo.gif', width: 75), root_path %>
-<br>
-<%= link_to 'Реєстрація', registration_path  %>
-<br>
-<%= current_user.name if current_user%>
-<%= link_to 'Вихід', sessions_logout_path  %>
-<br>
-<%= link_to 'Вхід', sessions_login_path %>
+<h1> Test app 1.0 <%= link_to image_tag('logo.gif', width: 50), root_path %> </h1>
+
+    <li><%= link_to 'sign in', sessions_login_path %></li>
+    <li>
+     <%= current_user.name if current_user%>
+     <%= link_to 'sign out', sessions_logout_path  %>
+    </li>
+    <li><%= link_to 'sign up', registration_path  %>  </li>
 
 
 
