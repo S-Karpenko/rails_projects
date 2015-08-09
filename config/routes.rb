@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tasks
   get 'sessions/login'
 
   get 'sessions/logout'
